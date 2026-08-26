@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ru" class="is-loading">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terroir Atelier — приватный винный дом</title>
+<meta name="description" content="Terroir Atelier — кураторская коллекция вин, приватные дегустации и персональный винный консьерж.">
+
+<meta property="og:title" content="Terroir Atelier — приватный винный дом">
+<meta property="og:description" content="Кураторская коллекция вин, приватные дегустации и персональный винный консьерж.">
+<meta property="og:image" content="https://terroir-atelier.example/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://terroir-atelier.example/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="AutoWine.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://terroir-atelier.example/#business",
+  "name": "Terroir Atelier",
+  "description": "Приватный винный дом с кураторской коллекцией вин, приватными дегустациями и персональным винным консьержем.",
+  "image": "https://terroir-atelier.example/og-image.jpg",
+  "priceRange": "$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Example City",
+    "addressCountry": "XX"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Winery",
+  "name": "Terroir Atelier",
+  "description": "Приватный винный дом, который собирает вина вокруг происхождения, терруара и людей, превращающих урожай в характер.",
+  "url": "https://terroir-atelier.example/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Terroir Atelier",
+  "url": "https://terroir-atelier.example/",
+  "slogan": "Вино начинается задолго до первого глотка."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Ателье", "item": "https://terroir-atelier.example/" },
+    { "@type": "ListItem", "position": 2, "name": "Коллекция", "item": "https://terroir-atelier.example/#collection" },
+    { "@type": "ListItem", "position": 3, "name": "Винный консьерж", "item": "https://terroir-atelier.example/#concierge" }
+  ]
+}
+</script>
+</head>
+<body class="is-loading">
+
+<div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Загрузка страницы">
+  <div class="preloader-curtain"></div>
+  <div class="preloader-noise" aria-hidden="true"></div>
+  <div class="preloader-inner">
+    <svg class="preloader-glass" viewBox="0 0 120 240" aria-hidden="true">
+      <defs>
+        <clipPath id="glassClip">
+          <path d="M32 10
+                   A 28 7 0 0 1 88 10
+                   L 88 98
+                   C 89 108 85 117 77 122
+                   C 69 127 61 130 60 137
+                   C 59 130 51 127 43 122
+                   C 35 117 31 108 32 98 Z"/>
+        </clipPath>
+        <linearGradient id="wineGradient" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#6B2733"/>
+          <stop offset="55%" stop-color="#35191F"/>
+          <stop offset="100%" stop-color="#A2543E"/>
+        </linearGradient>
+      </defs>
+
+      <g clip-path="url(#glassClip)">
+        <g class="preloader-glass__fill" style="transform: translateY(233px);">
+          <rect x="15" y="0" width="90" height="240" fill="url(#wineGradient)"/>
+          <path class="preloader-glass__wave" d="M15 0 Q 37 -6 60 0 T 105 0 V 22 H 15 Z" fill="#8C3A45"/>
+        </g>
+      </g>
+
+      <path class="preloader-glass__outline" d="M32 10
+                 A 28 7 0 0 1 88 10
+                 L 88 98
+                 C 89 108 85 117 77 122
+                 C 69 127 61 130 60 137
+                 C 59 130 51 127 43 122
+                 C 35 117 31 108 32 98 Z"/>
+
+      <line class="preloader-glass__stem" x1="60" y1="137" x2="60" y2="197"/>
+
+      <path class="preloader-glass__foot" d="M42 203 C 42 199 50 197 60 197 C 70 197 78 199 78 203 C 78 207 70 209 60 209 C 50 209 42 207 42 203 Z"/>
+    </svg>
+
+    <p class="preloader-mark">Terroir Atelier</p>
+    <p class="preloader-count" aria-hidden="true"><span data-preloader-count>0</span><i>%</i></p>
+  </div>
+</div>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar"></div></div>
+
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header class="site-header" data-reveal>
+  <div class="header-inner">
+    <a href="#hero" class="header-mark">Terroir Atelier</a>
+    <nav class="header-nav" aria-label="Основная навигация">
+      <a href="#terroir">Терруар</a>
+      <a href="#collection">Коллекция</a>
+      <a href="#makers">Мастера</a>
+      <a href="#concierge">Консьерж</a>
+      <a href="#atelier">Ателье</a>
+      <a href="#journal">Журнал</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobile-menu" class="mobile-menu" aria-label="Мобильная навигация" data-state="closed">
+  <a href="#terroir"><span style="white-space:nowrap">01 — Терруар</span></a>
+  <a href="#collection"><span style="white-space:nowrap">02 — Коллекция</span></a>
+  <a href="#makers"><span style="white-space:nowrap">03 — Мастера</span></a>
+  <a href="#concierge"><span style="white-space:nowrap">04 — Винный</span> консьерж</a>
+  <a href="#atelier"><span style="white-space:nowrap">05 — Ателье</span></a>
+  <a href="#journal"><span style="white-space:nowrap">06 — Журнал</span></a>
+</nav>
+
+<main id="main">
+
+<!-- ============ 01 — HERO ============ -->
+<section class="section hero" id="hero" aria-label="Приветствие">
+  <div class="hero-field" aria-hidden="true">
+    <img src="img/1.png" alt="" class="hero-photo" fetchpriority="high">
+    <div class="hero-gradient hero-gradient--base"></div>
+    <div class="hero-gradient hero-gradient--glow"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-bottle">
+      <div class="hero-bottle__glass"></div>
+      <div class="hero-bottle__label"></div>
+      <div class="hero-bottle__shine"></div>
+    </div>
+    <div class="hero-dust"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow" data-reveal>Приватный винный дом</p>
+    <h1 class="hero-title" data-text-reveal>
+      <span>Вино начинается</span>
+      <span>задолго до первого</span>
+      <span>глотка<i>.</i></span>
+    </h1>
+    <p class="hero-sub" data-reveal>Коллекция вин, собранная вокруг земли, времени и людей, которые превращают урожай в характер.</p>
+    <div class="hero-cta" data-reveal>
+      <a href="#collection" class="btn btn--filled" data-magnetic>Исследовать коллекцию</a>
+      <a href="#atelier" class="btn btn--ghost" data-magnetic>Открыть винный дом</a>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ============ 02 — THE TERROIR ============ -->
+<section class="section terroir" id="terroir" aria-labelledby="terroir-title">
+  <div class="terroir-grid">
+    <div class="terroir-visual" data-parallax="6">
+      <img src="img/1.png" alt="" loading="lazy" class="terroir-photo">
+      <div class="terroir-photo-overlay" aria-hidden="true"></div>
+      <div class="terroir-contour" aria-hidden="true"></div>
+    </div>
+    <div class="terroir-copy">
+      <p class="eyebrow" data-reveal><span style="white-space:nowrap">01 — Терруар</span></p>
+      <h2 id="terroir-title" class="editorial-title" data-text-reveal>
+        <span>У каждого вина есть</span>
+        <span>место, которое</span>
+        <span>невозможно повторить.</span>
+      </h2>
+      <p class="body-lg" data-reveal>Задолго до того, как вино окажется в бокале, оно формируется землёй. Наклон склона, состав почвы, направление <span style="white-space:nowrap">ветра — всё</span> это оставляет след, который не в силах воспроизвести ни одна технология. Мы собираем вина хозяйств, где терруар остаётся главным автором.</p>
+      <p class="body-md" data-reveal>Виноградная лоза чувствует высоту, на которой растёт, известняк и глину под корнями, разницу дневных и ночных температур. Винодел лишь сопровождает то, что уже заложено <span style="white-space:nowrap">местом — и</span> именно эта честность отличает вино с характером от вина без имени.</p>
+
+      <dl class="terroir-stats" data-reveal>
+        <div class="terroir-stat">
+          <dt>Высота</dt>
+          <dd>180–420 м</dd>
+        </div>
+        <div class="terroir-stat">
+          <dt>Почва</dt>
+          <dd>Известняк, глина, галька</dd>
+        </div>
+        <div class="terroir-stat">
+          <dt>Климат</dt>
+          <dd>Умеренный, континентальный</dd>
+        </div>
+        <div class="terroir-stat">
+          <dt>Урожай</dt>
+          <dd>Ручной сбор, конец сентября</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 — THE COLLECTION ============ -->
+<section class="section collection" id="collection" aria-labelledby="collection-title">
+  <div class="section-head">
+    <p class="eyebrow" data-reveal><span style="white-space:nowrap">02 — Коллекция</span></p>
+    <h2 id="collection-title" class="editorial-title editorial-title--wide" data-text-reveal>
+      <span>Не бутылки.</span>
+      <span>Истории происхождения.</span>
+    </h2>
+  </div>
+
+  <ul class="wine-list">
+    <li class="wine-row" data-reveal data-wine-tone="bordeaux">
+      <span class="wine-row__index">01</span>
+      <div class="wine-row__bottle" aria-hidden="true">
+        <img src="img/2.png" alt="" loading="lazy" class="wine-row__photo">
+        <div class="wine-row__gradient"></div>
+        <div class="wine-row__glass"></div>
+      </div>
+      <div class="wine-row__info">
+        <h3>Maison No. 01</h3>
+        <p class="wine-row__meta">Бордо, <span style="white-space:nowrap">Франция — 2018</span></p>
+        <p class="wine-row__grape">Каберне Совиньон, Мерло</p>
+      </div>
+      <a href="#concierge" class="wine-row__link" data-magnetic>Подробнее <i></i></a>
+    </li>
+
+    <li class="wine-row" data-reveal data-wine-tone="burgundy">
+      <span class="wine-row__index">02</span>
+      <div class="wine-row__bottle" aria-hidden="true">
+        <img src="img/3.png" alt="" loading="lazy" class="wine-row__photo">
+        <div class="wine-row__gradient"></div>
+        <div class="wine-row__glass"></div>
+      </div>
+      <div class="wine-row__info">
+        <h3>Cuvée Éclat</h3>
+        <p class="wine-row__meta">Бургундия, <span style="white-space:nowrap">Франция — 2019</span></p>
+        <p class="wine-row__grape">Пино Нуар</p>
+      </div>
+      <a href="#concierge" class="wine-row__link" data-magnetic>Подробнее <i></i></a>
+    </li>
+
+    <li class="wine-row" data-reveal data-wine-tone="tuscany">
+      <span class="wine-row__index">03</span>
+      <div class="wine-row__bottle" aria-hidden="true">
+        <img src="img/4.png" alt="" loading="lazy" class="wine-row__photo">
+        <div class="wine-row__gradient"></div>
+        <div class="wine-row__glass"></div>
+      </div>
+      <div class="wine-row__info">
+        <h3>Alta Terra</h3>
+        <p class="wine-row__meta">Тоскана, <span style="white-space:nowrap">Италия — 2017</span></p>
+        <p class="wine-row__grape">Санджовезе</p>
+      </div>
+      <a href="#concierge" class="wine-row__link" data-magnetic>Подробнее <i></i></a>
+    </li>
+
+    <li class="wine-row" data-reveal data-wine-tone="rhone">
+      <span class="wine-row__index">04</span>
+      <div class="wine-row__bottle" aria-hidden="true">
+        <img src="img/5.png" alt="" loading="lazy" class="wine-row__photo">
+        <div class="wine-row__gradient"></div>
+        <div class="wine-row__glass"></div>
+      </div>
+      <div class="wine-row__info">
+        <h3>Clos Nocturne</h3>
+        <p class="wine-row__meta">Долина Роны, <span style="white-space:nowrap">Франция — 2020</span></p>
+        <p class="wine-row__grape">Сира, Гренаш</p>
+      </div>
+      <a href="#concierge" class="wine-row__link" data-magnetic>Подробнее <i></i></a>
+    </li>
+
+    <li class="wine-row" data-reveal data-wine-tone="piedmont">
+      <span class="wine-row__index">05</span>
+      <div class="wine-row__bottle" aria-hidden="true">
+        <img src="img/6.png" alt="" loading="lazy" class="wine-row__photo">
+        <div class="wine-row__gradient"></div>
+        <div class="wine-row__glass"></div>
+      </div>
+      <div class="wine-row__info">
+        <h3>Valle Serena</h3>
+        <p class="wine-row__meta">Пьемонт, <span style="white-space:nowrap">Италия — 2016</span></p>
+        <p class="wine-row__grape">Неббиоло</p>
+      </div>
+      <a href="#concierge" class="wine-row__link" data-magnetic>Подробнее <i></i></a>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ 04 — WINE AS ART ============ -->
+<section class="section wine-art" aria-label="Вино как искусство">
+  <div class="wine-art-field" aria-hidden="true">
+    <div class="wine-art-gradient"></div>
+    <div class="wine-art-ring"></div>
+  </div>
+  <div class="wine-art-content">
+    <h2 class="wine-art-title" data-text-reveal>
+      <span>Некоторые вина запоминаются вкусом.</span>
+      <span><span style="white-space:nowrap">Другие — моментом</span><i>.</i></span>
+    </h2>
+  </div>
+</section>
+
+<!-- ============ 05 — THE MAKERS ============ -->
+<section class="section makers" id="makers" aria-labelledby="makers-title">
+  <div class="section-head">
+    <p class="eyebrow" data-reveal><span style="white-space:nowrap">03 — Мастера</span></p>
+    <h2 id="makers-title" class="editorial-title" data-text-reveal>
+      <span>Вино делают руки,</span>
+      <span>а не этикетка.</span>
+    </h2>
+  </div>
+
+  <div class="makers-track" data-makers-track>
+    <div class="makers-frame" data-parallax="4">
+      <div class="makers-media">
+        <img src="img/7.png" alt="" loading="lazy" class="makers-photo">
+        <div class="makers-gradient" data-tone="soil"></div>
+      </div>
+      <p class="makers-caption">Руки, знающие вес урожая</p>
+    </div>
+    <div class="makers-frame" data-parallax="4">
+      <div class="makers-media">
+        <img src="img/8.png" alt="" loading="lazy" class="makers-photo">
+        <div class="makers-gradient" data-tone="barrel"></div>
+      </div>
+      <p class="makers-caption">Бочки из старого дуба</p>
+    </div>
+    <div class="makers-frame" data-parallax="4">
+      <div class="makers-media">
+        <img src="img/9.png" alt="" loading="lazy" class="makers-photo">
+        <div class="makers-gradient" data-tone="cellar"></div>
+      </div>
+      <p class="makers-caption">Каменные стены погреба</p>
+    </div>
+    <div class="makers-frame" data-parallax="4">
+      <div class="makers-media">
+        <img src="img/10.png" alt="" loading="lazy" class="makers-photo">
+        <div class="makers-gradient" data-tone="dusk"></div>
+      </div>
+      <p class="makers-caption">Свет виноградника на закате</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 — CURATED COLLECTION ============ -->
+<section class="section curated" aria-labelledby="curated-title">
+  <div class="section-head">
+    <h2 id="curated-title" class="editorial-title editorial-title--wide" data-text-reveal>
+      <span>Не выбирайте вино</span>
+      <span>по этикетке.</span>
+    </h2>
+    <p class="body-lg" data-reveal>Начните с того, каким должен быть ваш вечер.</p>
+  </div>
+
+  <div class="curated-grid">
+    <a href="#concierge" class="curated-tile" data-tone="dinner" data-magnetic>
+      <img src="img/11.png" alt="" loading="lazy" class="curated-tile__photo">
+      <span class="curated-tile__gradient" aria-hidden="true"></span>
+      <span class="curated-tile__eyebrow">Для ужина</span>
+      <p class="curated-tile__text">Вина, которые раскрываются за длинным столом.</p>
+      <span class="curated-tile__cta">Смотреть подборку <i></i></span>
+    </a>
+    <a href="#concierge" class="curated-tile" data-tone="celebration" data-magnetic>
+      <img src="img/12.png" alt="" loading="lazy" class="curated-tile__photo">
+      <span class="curated-tile__gradient" aria-hidden="true"></span>
+      <span class="curated-tile__eyebrow">Для торжества</span>
+      <p class="curated-tile__text">Вина для моментов, которые хочется запомнить.</p>
+      <span class="curated-tile__cta">Смотреть подборку <i></i></span>
+    </a>
+    <a href="#concierge" class="curated-tile" data-tone="collection" data-magnetic>
+      <img src="img/13.png" alt="" loading="lazy" class="curated-tile__photo">
+      <span class="curated-tile__gradient" aria-hidden="true"></span>
+      <span class="curated-tile__eyebrow">Для коллекции</span>
+      <p class="curated-tile__text">Вина, которые становятся частью личной истории.</p>
+      <span class="curated-tile__cta">Смотреть подборку <i></i></span>
+    </a>
+    <a href="#concierge" class="curated-tile" data-tone="discovery" data-magnetic>
+      <img src="img/14.png" alt="" loading="lazy" class="curated-tile__photo">
+      <span class="curated-tile__gradient" aria-hidden="true"></span>
+      <span class="curated-tile__eyebrow">Для открытий</span>
+      <p class="curated-tile__text">Вина за пределами привычного маршрута.</p>
+      <span class="curated-tile__cta">Смотреть подборку <i></i></span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 07 — THE WINE CONCIERGE ============ -->
+<section class="section concierge" id="concierge" aria-labelledby="concierge-title">
+  <div class="concierge-grid">
+    <div class="concierge-copy">
+      <p class="eyebrow" data-reveal>Винный консьерж</p>
+      <h2 id="concierge-title" class="editorial-title" data-text-reveal>
+        <span>Не знаете, что открыть</span>
+        <span>сегодня вечером?</span>
+      </h2>
+      <p class="body-lg" data-reveal>Расскажите нам о блюде, настроении или поводе. Мы подберём несколько вин, которые будут звучать именно в этот момент.</p>
+    </div>
+
+    <form class="concierge-form" data-reveal aria-label="Форма подбора вина">
+      <div class="field">
+        <label for="occasion">Повод</label>
+        <input type="text" id="occasion" name="occasion" placeholder="Ужин с друзьями, юбилей…" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="dish">Блюдо</label>
+        <input type="text" id="dish" name="dish" placeholder="Что будет на столе" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="preferences">Предпочтения</label>
+        <input type="text" id="preferences" name="preferences" placeholder="Насыщенное, лёгкое, терпкое…" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="guests">Количество гостей</label>
+        <input type="number" id="guests" name="guests" min="1" max="50" placeholder="2" autocomplete="off">
+      </div>
+      <button type="submit" class="btn btn--filled btn--full" data-magnetic>Подобрать вино</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 08 — THE ATELIER ============ -->
+<section class="section atelier" id="atelier" aria-labelledby="atelier-title">
+  <div class="atelier-visual" data-parallax="5">
+    <div class="atelier-bg-photo is-active" id="atelierBgPhoto" style="background-image:url('img/15.png');" aria-hidden="true"></div>
+    <div class="atelier-gradient is-dimmed" id="atelierGradient" aria-hidden="true"></div>
+
+    <button type="button" class="glass-panel glass-panel--1 is-active" data-reveal data-panel-image="img/15.png">
+      <img src="img/15.png" alt="" loading="lazy" class="glass-panel__photo">
+      <span class="glass-panel__label">Дегустация</span>
+      <span class="glass-panel__value">Дегустационная зона</span>
+    </button>
+    <button type="button" class="glass-panel glass-panel--2" data-reveal data-panel-image="img/16.png">
+      <img src="img/16.png" alt="" loading="lazy" class="glass-panel__photo">
+      <span class="glass-panel__label">Погреб</span>
+      <span class="glass-panel__value">Длинный стол из дуба</span>
+    </button>
+    <button type="button" class="glass-panel glass-panel--3" data-reveal data-panel-image="img/17.png">
+      <img src="img/17.png" alt="" loading="lazy" class="glass-panel__photo">
+      <span class="glass-panel__label">Приватность</span>
+      <span class="glass-panel__value">Закрытый лаунж</span>
+    </button>
+  </div>
+
+  <div class="atelier-copy">
+    <p class="eyebrow" data-reveal><span style="white-space:nowrap">04 — Ателье</span></p>
+    <h2 id="atelier-title" class="editorial-title" data-text-reveal>
+      <span>Место, где вино</span>
+      <span>становится опытом.</span>
+    </h2>
+    <a href="#concierge" class="btn btn--ghost" data-magnetic>Посетить Ателье</a>
+  </div>
+</section>
+
+<!-- ============ 09 — PRIVATE TASTING ============ -->
+<section class="section tasting" id="tasting" aria-labelledby="tasting-title">
+  <div class="tasting-inner">
+    <p class="eyebrow" data-reveal>Приватная дегустация</p>
+    <h2 id="tasting-title" class="editorial-title editorial-title--wide" data-text-reveal>
+      <span>Некоторые вечера стоит</span>
+      <span>оставить только для своих.</span>
+    </h2>
+    <p class="body-lg" data-reveal>Закрытая дегустация в стенах <span style="white-space:nowrap">Ателье — формат</span> для тех, кто ценит тишину, время и внимание сомелье, а не список вин на бумаге.</p>
+
+    <dl class="tasting-facts" data-reveal>
+      <div class="tasting-fact">
+        <dt>Формат</dt>
+        <dd>Приватная дегустация</dd>
+      </div>
+      <div class="tasting-fact">
+        <dt>Гости</dt>
+        <dd>6–10 гостей</dd>
+      </div>
+      <div class="tasting-fact">
+        <dt>Подбор</dt>
+        <dd>Кураторский подбор</dd>
+      </div>
+      <div class="tasting-fact">
+        <dt>Сопровождение</dt>
+        <dd>Сопровождение сомелье</dd>
+      </div>
+    </dl>
+
+    <a href="#concierge" class="btn btn--filled" data-magnetic>Запросить дату</a>
+  </div>
+</section>
+
+<!-- ============ 10 — JOURNAL ============ -->
+<section class="section journal" id="journal" aria-labelledby="journal-title">
+  <div class="section-head">
+    <p class="eyebrow" data-reveal>Журнал Ателье</p>
+    <h2 id="journal-title" class="editorial-title" data-text-reveal>
+      <span>Заметки о земле,</span>
+      <span>времени и вкусе.</span>
+    </h2>
+  </div>
+
+  <div class="journal-grid">
+    <article class="journal-card" data-reveal data-tone="soil">
+      <img src="img/18.png" alt="" loading="lazy" class="journal-card__photo">
+      <span class="journal-card__gradient" aria-hidden="true"></span>
+      <span class="journal-card__index">01</span>
+      <h3>Как земля становится вкусом</h3>
+      <p>О минеральности, известняке и невидимой работе почвы.</p>
+    </article>
+    <article class="journal-card" data-reveal data-tone="vintage">
+      <img src="img/19.png" alt="" loading="lazy" class="journal-card__photo">
+      <span class="journal-card__gradient" aria-hidden="true"></span>
+      <span class="journal-card__index">02</span>
+      <h3>Почему один винтаж невозможно повторить</h3>
+      <p>О погоде года, которую невозможно воспроизвести дважды.</p>
+    </article>
+    <article class="journal-card" data-reveal data-tone="age">
+      <img src="img/20.png" alt="" loading="lazy" class="journal-card__photo">
+      <span class="journal-card__gradient" aria-hidden="true"></span>
+      <span class="journal-card__index">03</span>
+      <h3>Что происходит с вином после десяти лет</h3>
+      <p>О медленных превращениях в тёмном погребе.</p>
+    </article>
+    <article class="journal-card" data-reveal data-tone="pairing">
+      <img src="img/21.png" alt="" loading="lazy" class="journal-card__photo">
+      <span class="journal-card__gradient" aria-hidden="true"></span>
+      <span class="journal-card__index">04</span>
+      <h3>Искусство сочетания вина и еды</h3>
+      <p>О балансе, контрасте и моментах за столом.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 11 — FINAL CTA ============ -->
+<section class="section final-cta" aria-labelledby="final-cta-title">
+  <div class="final-cta-field" aria-hidden="true">
+    <div class="final-cta-gradient"></div>
+    <div class="final-cta-glow"></div>
+  </div>
+  <div class="final-cta-content">
+    <h2 id="final-cta-title" class="final-cta-title" data-text-reveal>
+      <span>Ваш следующий вечер</span>
+      <span>начинается здесь<i>.</i></span>
+    </h2>
+    <div class="hero-cta" data-reveal>
+      <a href="#collection" class="btn btn--filled" data-magnetic>Исследовать коллекцию</a>
+      <a href="#concierge" class="btn btn--ghost" data-magnetic>Связаться с Ателье</a>
+    </div>
+    <div class="final-cta-mark" data-reveal>
+      <span class="final-cta-mark__title">Terroir Atelier</span>
+      <span class="final-cta-mark__sub">Приватный винный дом</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="footer-brand__title">Terroir Atelier</span>
+      <p class="footer-brand__tag">Собрано с намерением.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Навигация в подвале">
+      <a href="#collection">Коллекция</a>
+      <a href="#terroir">Терруар</a>
+      <a href="#concierge">Винный консьерж</a>
+      <a href="#tasting">Приватная дегустация</a>
+      <a href="#journal">Журнал</a>
+      <a href="#atelier">Ателье</a>
+    </nav>
+
+    <div class="footer-contact">
+      <span class="footer-contact__label">Почта</span>
+      <a href="mailto:atelier@terroir-atelier.example">atelier@terroir-atelier.example</a>
+      <span class="footer-contact__label">Телефон</span>
+      <a href="tel:+000000000000">+00 000 000 000</a>
+      <span class="footer-contact__label">Соцсети</span>
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© 2026 Terroir Atelier. Все права защищены.</span>
+    <span>Концепт для демонстрации.</span>
+  </div>
+</footer>
+
+<script src="AutoWine.js"></script>
+</body>
+</html>
